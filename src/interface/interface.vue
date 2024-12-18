@@ -22,6 +22,7 @@
             :display-format="displayFormat"
             :single-line-mode="singleLineMode"
             :mode="toolbarMode"
+            :folder="folder"
         />
         <editor-content
             :editor="editor"
@@ -86,6 +87,7 @@
         field: string | null;
         collection: string | null;
         primaryKey: string | number | null;
+        folder?: string;
     }
     const props = withDefaults(defineProps<Props>(), {
         value: null,
@@ -544,6 +546,17 @@
     .flexible-editor :deep(table .selectedCell) {
         background: var(--theme--primary);
         color: var(--theme--background-subdued);
+    }
+
+    .flexible-editor :deep(img) {
+        display: block;
+        height: auto;
+        margin: 1.5rem 0;
+        max-width: 100%;
+    }
+
+    .flexible-editor :deep(img.ProseMirror-selectednode) {
+        outline: 3px solid var(--primary);
     }
 
     /* Placeholder */

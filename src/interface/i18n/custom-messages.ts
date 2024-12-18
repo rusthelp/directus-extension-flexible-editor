@@ -55,6 +55,7 @@ export default {
         undo: "$t:wysiwyg_options.undo",
         redo: "$t:wysiwyg_options.redo",
         table: "$t:wysiwyg_options.table",
+        image: "$t:wysiwyg_options.image",
         fullscreen: "$t:wysiwyg_options.fullscreen",
     },
     toolbar_mode: {
