@@ -30,6 +30,7 @@ export type ToolButtonProps = {
     shortcut: Tool["shortcut"];
     active: boolean;
     disabled: boolean;
+    folder?: string;
 };
 
 export type CustomToolButtonProps = ToolButtonProps & { editor: Editor };
